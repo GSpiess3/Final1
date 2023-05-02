@@ -21,7 +21,13 @@ class GUI:
         self.frame_Select.pack(anchor='w', pady=10)
         
         # Example Label
-        self.label_example =
+        self.frame_example = Frame(self.window)
+        self.label_example = Label(self.frame_example)
+        self.entry_example = Entry(self.frame_example, width=40)
+        self.label_example.pack(padx=20, side='left')
+        self.entry_example.pack(padx=20, side='left')
+        self.frame_example.pack(anchor='w', pady=10)
+        self.entry_example.pack_forget()
         
 
         # First number
@@ -59,21 +65,21 @@ class GUI:
         self.entry_second.delete(0, END)
         self.label_result.config(text='')
         self.entry_first.pack()
-        shape = self.radio_1.get()
+        selection: int = self.radio_1.get()
 
-        if shape == 1:
+        if selection == 1:
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
-        elif shape == 2:
+        elif selection == 2:
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
-        elif shape == 3:
+        elif selection == 3:
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
-        elif shape == 4:
+        elif selection == 4:
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
