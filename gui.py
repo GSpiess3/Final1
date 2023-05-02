@@ -107,5 +107,5 @@ class GUI:
                 self.label_result.config(text='No operation selected')
         except ValueError:
             self.label_result.config(text='Enter numeric values')
-        except TypeError:
-            self.label_result.config(text='Values must be positive')
+        except ZeroDivisionError:
+            self.label_result.config(text='Cant divide by zero')
