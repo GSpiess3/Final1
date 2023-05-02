@@ -1,4 +1,6 @@
 from tkinter import *
+import Calculations
+
 
 class GUI:
     def __init__(self, window):
