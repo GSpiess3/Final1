@@ -4,6 +4,16 @@ import Calculations
 
 class GUI:
     def __init__(self, window):
+        '''
+
+        :param window: connects to the gui page
+        radio buttons: Allows the user to pick the operation they wish to choose
+        example label: when an operation is selected this label gives you a hint on the order
+        first number: first entry
+        second number: second entry
+        results label: Will give the results
+        compute button: click to calculate
+        '''
         self.window = window
 
         # Radio buttons
@@ -28,7 +38,7 @@ class GUI:
         self.entry_example = Entry(self.frame_example, width=40)
         self.label_example.pack(padx=20, side='left')
         self.entry_example.pack(padx=20, side='left')
-        self.frame_example.pack(anchor='w', pady=10)
+        self.frame_example.pack(pady=10)
         self.entry_example.pack_forget()
         
 
@@ -92,6 +102,12 @@ class GUI:
             self.entry_second.pack()
 
     def Compute(self):
+        '''
+        param num1: The first number used in the calculations
+        param num2: The second number used in the calculations
+        param option: The operation that will be performed
+        :return: returns the output using the numbers given and the operation chosen to the 4th decimal pint
+        '''
         try:
             num1 = self.entry_first.get()
             num2 = self.entry_second.get()
