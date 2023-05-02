@@ -68,18 +68,23 @@ class GUI:
         selection: int = self.radio_1.get()
 
         if selection == 1:
+            self.label_example.config(text='You selected addition!!\n Ex: first number + second number')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
+
         elif selection == 2:
+            self.label_example.config(text='You selected subtraction!!\n Ex: first number - second number')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
         elif selection == 3:
+            self.label_example.config(text='You selected multiplication!!\n Ex: first number * second number')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
         elif selection == 4:
+            self.label_example.config(text='You selected division!!\n Ex: first number / second number')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
