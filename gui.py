@@ -51,16 +51,16 @@ class GUI:
         self.label_operation = Label(self.frame_shape, text='Shape\t')
         self.radio_2 = IntVar()
         self.radio_2.set(0)
-        self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1, command=self.shape)
-        self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2, command=self.shape)
-        self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.shape)
-        self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4, command=self.shape)
-        self.label_operation.pack(side='left', padx=5)
+        self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1, command=self.Option)
+        self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2, command=self.Option)
+        self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.Option)
+        self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4, command=self.Option)
+        self.label_operation.pack_forget()
         self.radio_circle.pack_forget()
         self.radio_square.pack_forget()
         self.radio_rectangle.pack_forget()
         self.radio_triangle.pack_forget()
-        self.frame_shape.pack(pady=10)
+        self.frame_shape.pack_forget()
 
 
         # First number
@@ -121,6 +121,9 @@ class GUI:
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
+        elif selection ==5:
+            self.radio_rectangle.config()
+            
 
     def Compute(self):
         '''
