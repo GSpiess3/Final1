@@ -84,7 +84,7 @@ class GUI:
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
         elif selection == 4:
-            self.label_example.config(text='You selected division!!\n Ex: first number / second number')
+            self.label_example.config(text='You selected division!!\n Ex: first number / second number\n Hint: you cant divide by zero')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
