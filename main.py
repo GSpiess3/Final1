@@ -5,7 +5,7 @@ def main():
 
     window = Tk()
     window.title('Final Part1')
-    window.geometry('250x200')
+    window.geometry('500x500')
     window.resizable(False, False)
 
     widgets = GUI(window)
