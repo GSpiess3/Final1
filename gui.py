@@ -123,7 +123,7 @@ class GUI:
             self.entry_second.pack()
         elif selection == 5:
             self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.Option)
-            
+            self.radio_rectangle.pack()
 
     def Compute(self):
         '''
