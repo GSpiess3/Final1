@@ -20,7 +20,7 @@ class GUI:
         self.radio_sub.pack()
         self.radio_mult.pack()
         self.radio_div.pack()
-        self.frame_Select.pack(anchor='w', pady=10)
+        self.frame_Select.pack(pady=10)
         
         # Example Label
         self.frame_example = Frame(self.window)
