@@ -93,18 +93,18 @@ class GUI:
 
     def Compute(self):
         try:
-            first_num = self.entry_first.get()
-            second_num = self.entry_second.get()
+            num1 = self.entry_first.get()
+            num2 = self.entry_second.get()
             option = self.radio_1.get()
 
             if option == 1:
-                self.label_result.config(text=f'Circle area = {area.circle(first_num)}')
+                self.label_result.config(text=f'{num1} + {num2} = {Calculations.add(num1, num2)}')
             elif option == 2:
-                self.label_result.config(text=f'Square area = {area.square(first_num)}')
+                self.label_result.config(text=f'{num1} - {num2} = {Calculations.sub(num1, num2)}')
             elif option == 3:
-                self.label_result.config(text=f'Rectangle area = {area.rectangle(first_num, second_num)}')
+                self.label_result.config(text=f'{num1} * {num2} = {Calculations.mult(num1, num2)}')
             elif option == 4:
-                self.label_result.config(text=f'Triangle area = {area.triangle(first_num, second_num)}')
+                self.label_result.config(text=f'{num1} / {num2} = {Calculations.division(num1, num2)}')
             else:
                 self.label_result.config(text='No operation selected')
         except ValueError:
