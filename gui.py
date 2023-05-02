@@ -98,13 +98,13 @@ class GUI:
             option = self.radio_1.get()
 
             if option == 1:
-                self.label_result.config(text=f'{num1} + {num2} = {Calculations.add(num1, num2)}')
+                self.label_result.config(text=f'{num1} + {num2} = {Calculations.add(num1, num2):.4f}')
             elif option == 2:
-                self.label_result.config(text=f'{num1} - {num2} = {Calculations.sub(num1, num2)}')
+                self.label_result.config(text=f'{num1} - {num2} = {Calculations.sub(num1, num2):.4f}')
             elif option == 3:
-                self.label_result.config(text=f'{num1} * {num2} = {Calculations.mult(num1, num2)}')
+                self.label_result.config(text=f'{num1} * {num2} = {Calculations.mult(num1, num2):.4f}')
             elif option == 4:
-                self.label_result.config(text=f'{num1} / {num2} = {Calculations.div(num1, num2)}')
+                self.label_result.config(text=f'{num1} / {num2} = {Calculations.div(num1, num2):.4f}')
             else:
                 self.label_result.config(text='No operation selected')
         except ValueError:
