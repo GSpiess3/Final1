@@ -104,7 +104,7 @@ class GUI:
             elif option == 3:
                 self.label_result.config(text=f'{num1} * {num2} = {Calculations.mult(num1, num2)}')
             elif option == 4:
-                self.label_result.config(text=f'{num1} / {num2} = {Calculations.division(num1, num2)}')
+                self.label_result.config(text=f'{num1} / {num2} = {Calculations.div(num1, num2)}')
             else:
                 self.label_result.config(text='No operation selected')
         except ValueError:
