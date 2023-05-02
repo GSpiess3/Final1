@@ -53,7 +53,7 @@ class GUI:
         self.radio_2.set(0)
         self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1, command=self.Option)
         self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2, command=self.Option)
-        self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.Option)
+        self.radio_rectangle = Radiobutton()
         self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4, command=self.Option)
         self.label_operation.pack_forget()
         self.radio_circle.pack_forget()
@@ -122,7 +122,7 @@ class GUI:
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
         elif selection ==5:
-            self.radio_rectangle.config()
+            self.radio_rectangle =  Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.Option)
             
 
     def Compute(self):
