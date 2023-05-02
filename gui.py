@@ -25,7 +25,7 @@ class GUI:
         self.radio_sub = Radiobutton(self.frame_Select, text='Sub', variable=self.radio_1, value=2, command=self.Option)
         self.radio_mult = Radiobutton(self.frame_Select, text='Multiplication', variable=self.radio_1, value=3, command=self.Option)
         self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4, command=self.Option)
-        self.radio_geometry = Radiobutton(self.frame_Select, text='geometry', variable=self.radio_1, value=5, command=self.Option)
+        self.radio_geometry = Radiobutton(self.frame_Select, text='Geometry', variable=self.radio_1, value=5, command=self.Option)
         self.label_Options.pack(padx=5)
         self.radio_add.pack()
         self.radio_sub.pack()
@@ -33,6 +33,8 @@ class GUI:
         self.radio_div.pack()
         self.radio_geometry.pack()
         self.frame_Select.pack(pady=10)
+
+
         
         # Example Label
         self.frame_example = Frame(self.window)
@@ -43,6 +45,8 @@ class GUI:
         self.frame_example.pack(pady=10)
         self.entry_example.pack_forget()
         
+        # geometry slection\
+
 
         # First number
         self.frame_first = Frame(self.window)
