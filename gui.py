@@ -5,7 +5,6 @@ import Calculations
 class GUI:
     def __init__(self, window):
         '''
-
         :param window: connects to the gui page
         radio buttons: Allows the user to pick the operation they wish to choose
         example label: when an operation is selected this label gives you a hint on the order
@@ -24,9 +23,12 @@ class GUI:
         self.radio_1.set(0)
         self.radio_add = Radiobutton(self.frame_Select, text='Add', variable=self.radio_1, value=1, command=self.Option)
         self.radio_sub = Radiobutton(self.frame_Select, text='Sub', variable=self.radio_1, value=2, command=self.Option)
-        self.radio_mult = Radiobutton(self.frame_Select, text='Multiplication', variable=self.radio_1, value=3, command=self.Option)
-        self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4, command=self.Option)
-        self.radio_geometry = Radiobutton(self.frame_Select, text='Geometry', variable=self.radio_1, value=5, command=self.Option)
+        self.radio_mult = Radiobutton(self.frame_Select, text='Multiplication', variable=self.radio_1, value=3,
+                                      command=self.Option)
+        self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4,
+                                     command=self.Option)
+        self.radio_geometry = Radiobutton(self.frame_Select, text='Geometry', variable=self.radio_1, value=5,
+                                          command=self.Option)
         self.label_Options.pack(padx=5)
         self.radio_add.pack()
         self.radio_sub.pack()
@@ -35,8 +37,6 @@ class GUI:
         self.radio_geometry.pack()
         self.frame_Select.pack(pady=10)
 
-
-        
         # Example Label
         self.frame_example = Frame(self.window)
         self.label_example = Label(self.frame_example)
@@ -45,23 +45,26 @@ class GUI:
         self.entry_example.pack(padx=20, side='left')
         self.frame_example.pack(pady=10)
         self.entry_example.pack_forget()
-        
+
         # geometry slection
         self.frame_shape = Frame(self.window)
         self.label_operation = Label(self.frame_shape, text='Shape\t')
         self.radio_2 = IntVar()
         self.radio_2.set(0)
-        self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1, command=self.Option)
-        self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2, command=self.Option)
-        self.radio_rectangle = Radiobutton()
-        self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4, command=self.Option)
-        self.label_operation.pack_forget()
+        self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1,
+                                        command=self.shape)
+        self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2,
+                                        command=self.shape)
+        self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3,
+                                           command=self.shape)
+        self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4,
+                                          command=self.shape)
+        self.label_operation.pack(side='left', padx=5)
         self.radio_circle.pack_forget()
         self.radio_square.pack_forget()
         self.radio_rectangle.pack_forget()
         self.radio_triangle.pack_forget()
-        self.frame_shape.pack_forget()
-
+        self.frame_shape.pack(pady=10)
 
         # First number
         self.frame_first = Frame(self.window)
@@ -117,13 +120,11 @@ class GUI:
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
         elif selection == 4:
-            self.label_example.config(text='You selected division!!\n Ex: first number / second number\n Hint: you cant divide by zero')
+            self.label_example.config(
+                text='You selected division!!\n Ex: first number / second number\n Hint: you cant divide by zero')
             self.label_first.config(text='First Number')
             self.label_second.config(text='Second Number')
             self.entry_second.pack()
-        elif selection == 5:
-            self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3, command=self.Option)
-            self.radio_rectangle.pack()
 
     def Compute(self):
         '''
