@@ -8,7 +8,6 @@ class GUI:
         :param window: connects to the gui page
         radio buttons: Allows the user to pick the operation they wish to choose
         example label: when an operation is selected this label gives you a hint on the order
-        geometry radio: When selected you can perform geometric math as well
         first number: first entry
         second number: second entry
         results label: Will give the results
@@ -72,6 +71,10 @@ class GUI:
         self.frame_button.pack()
 
     def Option(self):
+        '''
+        This function is designed to present the boxes after selcting your operation
+        :return:
+        '''
         self.entry_first.delete(0, END)
         self.entry_second.delete(0, END)
         self.label_result.config(text='')
