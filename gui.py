@@ -27,14 +27,11 @@ class GUI:
                                       command=self.Option)
         self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4,
                                      command=self.Option)
-        self.radio_geometry = Radiobutton(self.frame_Select, text='Geometry', variable=self.radio_1, value=5,
-                                          command=self.Option)
         self.label_Options.pack(padx=5)
         self.radio_add.pack()
         self.radio_sub.pack()
         self.radio_mult.pack()
         self.radio_div.pack()
-        self.radio_geometry.pack()
         self.frame_Select.pack(pady=10)
 
         # Example Label
@@ -45,26 +42,6 @@ class GUI:
         self.entry_example.pack(padx=20, side='left')
         self.frame_example.pack(pady=10)
         self.entry_example.pack_forget()
-
-        # geometry slection
-        self.frame_shape = Frame(self.window)
-        self.label_operation = Label(self.frame_shape, text='Shape\t')
-        self.radio_2 = IntVar()
-        self.radio_2.set(0)
-        self.radio_circle = Radiobutton(self.frame_shape, text='Circle', variable=self.radio_2, value=1,
-                                        command=self.shape)
-        self.radio_square = Radiobutton(self.frame_shape, text='Square', variable=self.radio_2, value=2,
-                                        command=self.shape)
-        self.radio_rectangle = Radiobutton(self.frame_shape, text='Rectangle', variable=self.radio_2, value=3,
-                                           command=self.shape)
-        self.radio_triangle = Radiobutton(self.frame_shape, text='Triangle', variable=self.radio_2, value=4,
-                                          command=self.shape)
-        self.label_operation.pack(side='left', padx=5)
-        self.radio_circle.pack_forget()
-        self.radio_square.pack_forget()
-        self.radio_rectangle.pack_forget()
-        self.radio_triangle.pack_forget()
-        self.frame_shape.pack(pady=10)
 
         # First number
         self.frame_first = Frame(self.window)
