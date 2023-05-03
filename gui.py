@@ -23,10 +23,8 @@ class GUI:
         self.radio_1.set(0)
         self.radio_add = Radiobutton(self.frame_Select, text='Add', variable=self.radio_1, value=1, command=self.Option)
         self.radio_sub = Radiobutton(self.frame_Select, text='Sub', variable=self.radio_1, value=2, command=self.Option)
-        self.radio_mult = Radiobutton(self.frame_Select, text='Multiplication', variable=self.radio_1, value=3,
-                                      command=self.Option)
-        self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4,
-                                     command=self.Option)
+        self.radio_mult = Radiobutton(self.frame_Select, text='Multiplication', variable=self.radio_1, value=3, command=self.Option)
+        self.radio_div = Radiobutton(self.frame_Select, text='Divide', variable=self.radio_1, value=4, command=self.Option)
         self.label_Options.pack(padx=5)
         self.radio_add.pack()
         self.radio_sub.pack()
@@ -47,18 +45,18 @@ class GUI:
         self.frame_first = Frame(self.window)
         self.label_first = Label(self.frame_first)
         self.entry_first = Entry(self.frame_first, width=40)
-        self.label_first.pack(padx=20, side='left')
-        self.entry_first.pack(padx=20, side='left')
-        self.frame_first.pack(anchor='w', pady=10)
+        self.label_first.pack(padx=20)
+        self.entry_first.pack(padx=20)
+        self.frame_first.pack(pady=10)
         self.entry_first.pack_forget()
 
         # Second number
         self.frame_second = Frame(self.window)
         self.label_second = Label(self.frame_second)
         self.entry_second = Entry(self.frame_second, width=40)
-        self.label_second.pack(padx=20, side='left')
-        self.entry_second.pack(padx=20, side='left')
-        self.frame_second.pack(anchor='w', pady=10)
+        self.label_second.pack(padx=20)
+        self.entry_second.pack(padx=20)
+        self.frame_second.pack(pady=10)
         self.entry_second.pack_forget()
 
         # Results label
