@@ -117,10 +117,10 @@ class GUI:
             num2 = self.entry_second.get()
             option = self.radio_1.get()
 
-            if num1 == 'ans' and self.previous_answer is not None:
+            if (str(num1.lower()) == 'ans' or str(num1.lower()) == 'answer') and self.previous_answer is not None:
                 num1 = self.previous_answer
 
-            if num2 == 'ans' and self.previous_answer is not None:
+            if (str(num2.lower()) == 'ans' or str(num2.lower()) == 'answer') and self.previous_answer is not None:
                 num2 = self.previous_answer
 
             num1 = float(num1)
