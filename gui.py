@@ -14,6 +14,8 @@ class GUI:
         compute button: click to calculate
         '''
         self.window = window
+        self.previous_answer = None
+
 
         # Radio buttons
         self.frame_Select = Frame(self.window)
@@ -115,17 +117,42 @@ class GUI:
             num2 = self.entry_second.get()
             option = self.radio_1.get()
 
+            if num1 == 'ans' and self.previous_answer is not None:
+                num1 = self.previous_answer
+
+            if num2 == 'ans' and self.previous_answer is not None:
+                num2 = self.previous_answer
+
+            num1 = float(num1)
+            num2 = float(num2)
+
             if option == 1:
-                self.label_result.config(text=f'{num1} + {num2} = {Calculations.add(num1, num2):.4f}')
+                result = Calculations.add(num1, num2)
+                self.label_result.config(text=f'{num1} + {num2} = {result:.4f}')
+
             elif option == 2:
-                self.label_result.config(text=f'{num1} - {num2} = {Calculations.sub(num1, num2):.4f}')
+                result = Calculations.sub(num1, num2)
+                self.label_result.config(text=f'{num1} - {num2} = {result:.4f}')
+
             elif option == 3:
-                self.label_result.config(text=f'{num1} * {num2} = {Calculations.mult(num1, num2):.4f}')
+                result = Calculations.mult(num1, num2)
+                self.label_result.config(text=f'{num1} * {num2} = {result:.4f}')
+
             elif option == 4:
-                self.label_result.config(text=f'{num1} / {num2} = {Calculations.div(num1, num2):.4f}')
+                if num2 == 0:
+                    self.label_result.config(text='Cannot divide by zero')
+                else:
+                    result = Calculations.div(num1, num2)
+                    self.label_result.config(text=f'{num1} / {num2} = {result:.4f}')
+
             else:
                 self.label_result.config(text='No operation selected')
+
+            self.previous_answer = result
+
         except ValueError:
             self.label_result.config(text='Enter numeric values')
-        except ZeroDivisionError:
-            self.label_result.config(text='Cant divide by zero')
+
+
+
+
